@@ -2,15 +2,15 @@
     {
       "date": "2023-12-05",
       "exercises": [
-        { "name": "Bench Press", "sets": 3, "reps": 8, "weight": 135 },
-        { "name": "Squats", "sets": 4, "reps": 10, "weight": 185 }
+        { "name": "Bench Press", "set": 3, "reps": 8, "weight": 135 },
+        { "name": "Squats", "set": 4, "reps": 10, "weight": 185 }
       ]
     },
     {
       "date": "2023-12-06",
       "exercises": [
-        { "name": "Deadlifts", "sets": 3, "reps": 5, "weight": 225 },
-        { "name": "Overhead Press", "sets": 3, "reps": 8, "weight": 95 }
+        { "name": "Deadlifts", "set": 3, "reps": 5, "weight": 225 },
+        { "name": "Overhead Press", "set": 3, "reps": 8, "weight": 95 }
       ]
     }
   ]
