@@ -1,0 +1,43 @@
+[
+    {
+      "name": "Push-up",
+      "category": "Strength",
+      "description": "A classic upper body exercise that targets the chest, shoulders, and triceps."
+    },
+    {
+      "name": "Running",
+      "category": "Cardio",
+      "description": "An excellent cardiovascular exercise that improves endurance and burns calories."
+    },
+    {
+      "name": "Squats",
+      "category": "Strength",
+      "description": "Targets the muscles in the legs, particularly the quadriceps, hamstrings, and glutes."
+    },
+    {
+      "name": "Plank",
+      "category": "Core",
+      "description": "Strengthens the core muscles, including the abs, back, and shoulders."
+    },
+    {
+      "name": "Cycling",
+      "category": "Cardio",
+      "description": "A low-impact aerobic exercise that improves cardiovascular health and leg strength."
+    },
+    {
+      "name": "Lunges",
+      "category": "Strength",
+      "description": "Works the muscles in the legs and buttocks, helping to improve balance and stability."
+    },
+    {
+      "name": "Yoga",
+      "category": "Flexibility",
+      "description": "A practice that combines physical postures, breath control, and meditation to enhance flexibility and mindfulness."
+    },
+    {
+      "name": "Jumping Jacks",
+      "category": "Cardio",
+      "description": "A simple and effective full-body exercise that boosts heart rate and improves coordination."
+    }
+  ]
+  

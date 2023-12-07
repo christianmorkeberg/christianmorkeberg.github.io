@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table with Dropdown (Exercise Names)</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="myTable">
+    <tr>
+      <td>
+        <select name="exerciseDropdown" class="exerciseDropdown">
+          <!-- Options will be dynamically loaded from JSON -->
+        </select>
+      </td>
+      <td><input type="text" name="column2" placeholder="Column 2"></td>
+      <td><input type="text" name="column3" placeholder="Column 3"></td>
+      <td><input type="text" name="column4" placeholder="Column 4"></td>
+    </tr>
+  </table>
+
+  <button onclick="addRow()">Add Row</button>
+
+  <script>
+    // Fetch data from external JSON file
+    fetch('exercises.json')  // Assuming 'exercises.json' is in the same directory
+      .then(response => response.json())
+      .then(data => {
+        // Get the dropdown element in the first row
+        const exerciseDropdown = document.querySelector('.exerciseDropdown');
+
+        // Populate the dropdown with exercise names from the JSON data
+        data.forEach(exercise => {
+          const optionElement = document.createElement('option');
+          optionElement.value = exercise.name;
+          optionElement.textContent = exercise.name;
+          exerciseDropdown.appendChild(optionElement);
+        });
+      })
+      .catch(error => console.error('Error fetching JSON:', error));
+
+    function addRow() {
+      var table = document.getElementById("myTable");
+      var newRow = table.insertRow(table.rows.length);
+
+      for (var i = 0; i < 4; i++) {
+        var cell = newRow.insertCell(i);
+
+        if (i === 0) {
+          // Clone the existing dropdown and append it to the new row
+          var existingDropdown = document.querySelector('.exerciseDropdown');
+          var exerciseDropdown = existingDropdown.cloneNode(true);
+          cell.appendChild(exerciseDropdown);
+        } else {
+          var input = document.createElement("input");
+          input.type = "text";
+          input.name = "column" + (i + 1);
+          input.placeholder = "Column " + (i + 1);
+          cell.appendChild(input);
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
