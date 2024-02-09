@@ -14,5 +14,5 @@ def parse_arguments():
     arg2 = request.args.get('arg2')
     return f'Arguments received: arg1={arg1}, arg2={arg2}'
 
-app.run(debug=True)
+#app.run(debug=True)
 print("HELLO!")
